@@ -20,13 +20,15 @@ Endothelial cell segmentation using a chromatic segmentation algorithm.
 
 ## To run the job 
 
-Pull the docker repo from docker hub
+Install docker on your system
+https://docs.docker.com/engine/install/
+
+Pull the docker repo from docker hub (see command 1 below)
 https://hub.docker.com/r/mikeg64/caiman
 
 1. docker pull mikeg64/caiman:4.0
 2. use the docker command shown below 
 
-https://hub.docker.com/repository/docker/mikeg64/caiman
 Either 
 1. copy and paste the command below 
 2. run the script file directly from the  folder containing the jobfile
@@ -34,6 +36,9 @@ Either
 May need to update the $PWD with the directory path for the working directory
 
 docker run -v $PWD:/home/caiman mikeg64/caiman:4.0  /caiman-matlab/run_caiman_standalone.sh /opt/mcr/v910
+
+if you have built the docker image on your own system then use the command
+docker run -v $PWD:/home/caiman caiman:4.0  /caiman-matlab/run_caiman_standalone.sh /opt/mcr/v910
 
 1. https://github.com/mikeg64/caiman-jobexample
 2. https://www.sciencedirect.com/science/article/pii/S016926071000194X
